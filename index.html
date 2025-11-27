@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxy - Projeto</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 fluxy-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 fw-bold" href="#">Fluxy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-1 mt-1 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Conta</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Finanças
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Saldo</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Receitas</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Despesas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="me-5">
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="O que você procura?"
+                            aria-label="Search" />
+                        <button class="btn btn-search py-3" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2>Meu Painel</h2>
+                <p class="text-secondary">Tenha uma visão geral das suas finanças.</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card card-fluxy mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title saldoatual">Saldo Atual</h5>
+                        <p class="card-text fs-3">R$ 2.450,00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title receitas">Receitas</h5>
+                        <p class="card-text fs-3">R$ 4.200,00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title despesas">Despesas</h5>
+                        <p class="card-text fs-3">R$ 1.750,00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3 ps-2">
+                        <h5 class="mb-0 fw-bold text-start">Últimas Movimentações</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Descrição</th>
+                                        <th>Categoria</th>
+                                        <th class="text-end">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>27/11</td>
+                                        <td>Salário Mensal</td>
+                                        <td><span class="badge text-bg-success">Receita</span></td>
+                                        <td class="text-end text-success fw-bold">+ R$ 4.200,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26/11</td>
+                                        <td>Supermercado</td>
+                                        <td><span class="badge text-bg-danger">Alimentação</span></td>
+                                        <td class="text-end text-danger fw-bold">- R$ 450,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25/11</td>
+                                        <td>Netflix</td>
+                                        <td><span class="badge text-bg-secondary">Assinatura</span></td>
+                                        <td class="text-end text-danger fw-bold">- R$ 55,90</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5 py-5 border-top">
+        <div class="row align-items-center">
+
+            <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                <h2 class="display-4 ms-0" style="font-family: 'Montserrat', sans-serif; font-weight: 800;">
+                    Jeito Fluxy de ser
+                </h2>
+                <p class="lead text-secondary mt-3">
+                    Simplifique suas finanças e ganhe tranquilidade. Tenha o controle total na palma da sua mão.
+                </p>
+                <div class="mt-4"> <button class="btn btn-fluxy btn-lg px-5 py-3 shadow-sm">
+                        Fale conosco
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center img">
+                <img src="./assets/imagens/pexels-mikhail-nilov-6969619.jpg" alt="Seja Fluxy" title="Seja Fluxy"
+                    class="img-fluid rounded-4 shadow">
+            </div>
+
+        </div>
+    </div>
+    <footer class="py-4 border-top mt-5" style="background-color: var(--fluxy-beige);">
+        <div class="container text-center">
+            <p class="mb-0 text-secondary small">
+                &copy; 2025 Fluxy. Todos os direitos reservados.
+            </p>
+            <div class="mt-2">
+                <a href="#" class="text-secondary text-decoration-none me-3 small">Privacidade</a>
+                <a href="#" class="text-secondary text-decoration-none small">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

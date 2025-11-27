@@ -1,0 +1,109 @@
+:root {
+    --fluxy-brown: #CAAD7E;
+    --fluxy-beige: #ECEBC9;
+    --fluxy-cream: #F6F6DB;
+    --fluxy-green-light: #D5E7B8;
+    --fluxy-green-med: #C4DEA4;
+    --fluxy-green-main: #A7D489;
+    --fluxy-text: #4a4a4a;
+}
+
+body {
+    background-color: var(--fluxy-cream);
+    color: var(--fluxy-text);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fluxy-navbar {
+    background: linear-gradient(to right, var(--fluxy-green-med), var(--fluxy-green-main));
+    box-shadow: 0 4px 15px rgba(167, 212, 137, 0.4);
+}
+
+.fluxy-navbar .nav-link {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.fluxy-navbar .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+.card-body {
+    background-color: var(--fluxy-beige);
+    border: none;
+    border-radius: 15px;
+}
+.card-body .card-title.despesas {
+    color: #e74c3c;
+    font-weight: 700;
+}
+.card-body .card-title.receitas {
+    color: #27ae60;
+    font-weight: 700;
+}
+.card-body .card-title.saldoatual {
+    color: #4a4a4a;
+    font-weight: 700;
+}
+.card-fluxy {
+    background-color: var(--fluxy-green-main);
+    color: #2c3e50;
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-fluxy {
+    background-color: var(--fluxy-green-med);
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    max-width: 550px;
+}
+
+.btn-fluxy:hover {
+    background-color: var(--fluxy-green-light);
+    color: #A7D489;
+}
+
+.col-md-4 .card {
+    background-color: transparent;
+    border: none;
+}
+
+.fluxy-navbar .form-control {
+    border-radius: 50px 0 0 50px;
+    border: 1px solid var(--fluxy-green-light);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-left: 20px;
+}
+
+
+.fluxy-navbar .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(202, 173, 126, 0.3);
+    border-color: var(--fluxy-brown);
+}
+
+
+.fluxy-navbar .btn-search {
+    border-radius: 0 50px 50px 0;
+    background-color: var(--fluxy-cream);
+    color: #4a4a4a;
+    border: 1px solid var(--fluxy-cream);
+    padding-left: 20px;
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+
+.fluxy-navbar .btn-search:hover {
+    background-color: var(--fluxy-beige);
+    color: var(--fluxy-brown);
+}
+
+.img {
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.575));
+}
