@@ -3,7 +3,6 @@ package br.com.fluxy.model;
 public class Pendencias {
 
     private double[] valorPendencias = new double[100];
-    private double[] removerPendencias = new double[100];
 
     private int quantidadeAtual = 0;
 
@@ -22,12 +21,18 @@ public class Pendencias {
     }
 
     public void removerPendencia(double valorDigitado){
-        removerPendencias = valorPendencias;
-        if(quantidadeAtual < 100){
-            removerPendencias[quantidadeAtual] = valorDigitado;
-            quantidadeAtual--;
-            valorPendencias = removerPendencias;
-            System.out.println("Removendo o valor digitado: R$" + valorDigitado);
+        boolean encontrou = false;
+
+        for (int i=0;i<quantidadeAtual;i++){
+            if (valorPendencias[i] == valorDigitado){
+                valorPendencias[i] = 0.0;
+                encontrou = true;
+                System.out.println("Pendência de R$" + valorDigitado + " foi removida com sucesso!");
+            }
+
+            if (!encontrou) {
+                System.out.println("Nenhuma pendência nesse valor foi encontrada.");
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 package br.com.fluxy.principal;
 import java.util.Scanner;
 
+import br.com.fluxy.model.Conta;
 import br.com.fluxy.model.Entradas;
 import br.com.fluxy.model.Login;
 import br.com.fluxy.model.Pendencias;
@@ -11,10 +12,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Login login = new Login();
+        Conta conta = new Conta(login, 0.0);
         Entradas entradas = new Entradas();
         Pendencias pendencias = new Pendencias();
         Saidas saidas = new Saidas();
-        int op, opent, oppen, opcont, opsai;
+        int op, opent, oppen, opsai;
 
         System.out.println("\nDigite seu login:");
         System.out.print("Usuário: ");
@@ -32,7 +34,8 @@ public class Main {
 
             switch(op){
                 case 1:
-                    
+                    conta.exibirDadosConta();
+                    break;
                 case 2:
                     do{
                         System.out.println("\nMENU ENTRADAS");
@@ -43,6 +46,8 @@ public class Main {
                                 System.out.print("Digite o valor que deseja registrar:");
                                 double valorEntradas = sc.nextDouble();
                                 entradas.registrarEntrada(valorEntradas);
+                                entradas.registrarEntrada(valorEntradas);
+                                conta.adicionarSaldo(valorEntradas);
                                 break;
                             case 2:
                                 System.out.print("Entradas: ");
@@ -98,6 +103,7 @@ public class Main {
                                 saidas.setDescricao(descricao);
                                 saidas.setValorSaida(valorSaida);
                                 saidas.registrarSaida();
+                                conta.subtrairSaldo(valorSaida);
                                 break;
                             case 0:
                                 System.out.println("Voltando ao Menu Inicial...");
@@ -112,6 +118,9 @@ public class Main {
             }
         }
         while (op!=0);
+
+        sc.close();
     }
+
 
 }

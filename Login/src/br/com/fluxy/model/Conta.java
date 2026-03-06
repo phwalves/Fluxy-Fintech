@@ -26,7 +26,7 @@ public class Conta {
 
         System.out.println("\nDados da Conta");
         System.out.println("Usuário: " + dadosLogin.getUsuario());
-        System.out.println("Senha: " + dadosLogin.getPassword());
+        // System.out.println("Senha: " + dadosLogin.getPassword());
         System.out.println("Saldo disponível: R$" + saldoAtual);
 
     }
