@@ -28,12 +28,13 @@ public class Pendencias {
                 valorPendencias[i] = 0.0;
                 encontrou = true;
                 System.out.println("Pendência de R$" + valorDigitado + " foi removida com sucesso!");
-            }
-
-            if (!encontrou) {
-                System.out.println("Nenhuma pendência nesse valor foi encontrada.");
+                break;
             }
         }
+
+        if (!encontrou) {
+                System.out.println("Nenhuma pendência nesse valor foi encontrada.");
+            }
     }
 
     public void visualziarPendencias(){

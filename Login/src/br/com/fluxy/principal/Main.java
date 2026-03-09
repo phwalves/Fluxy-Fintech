@@ -46,7 +46,6 @@ public class Main {
                                 System.out.print("Digite o valor que deseja registrar:");
                                 double valorEntradas = sc.nextDouble();
                                 entradas.registrarEntrada(valorEntradas);
-                                entradas.registrarEntrada(valorEntradas);
                                 conta.adicionarSaldo(valorEntradas);
                                 break;
                             case 2:
