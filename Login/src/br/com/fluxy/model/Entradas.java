@@ -1,54 +1,34 @@
 package br.com.fluxy.model;
 
-public class Entradas {
+public class Entradas extends Transacao{
+    
+    private String tipoEntrada;
+    
 
-    private double[] valorEntradas = new double[100];
-
-    private int quantidadeAtual = 0;
+    Conta contaUsuario = new Conta();
 
     public Entradas(){}
 
-    public Entradas(double[] valorEntradas){
-        this.valorEntradas = valorEntradas;
+    public Entradas(String descricao, double valor, String tipoEntrada){
+        super(descricao, valor);
+        this.tipoEntrada = tipoEntrada;
     }
 
-    public void registrarEntrada(double valorDigitado){
-        if (quantidadeAtual < 100){
-            valorEntradas[quantidadeAtual] = valorDigitado;
-            quantidadeAtual++;
-            System.out.println("Registrando o valor digitado: R$" + valorDigitado);
-        }
+    public void registrarEntrada(){
+        System.out.println("\nEntrada registrada! Categoria: " + tipoEntrada);
+        contaUsuario.adicionarSaldo(this.getValor());
     }
 
-    public void visualizarEntradas(){
-        if (quantidadeAtual == 0){
-            System.out.println("Nenhum valor registrado ainda.");
-        } else {
-            for (int i = 0; i<quantidadeAtual; i++){
-                System.out.println("Entrada " + (i+1) + " R$ " + valorEntradas[i]);
-            }
-        }
+    public String getTipoEntrada() {
+        return tipoEntrada;
     }
 
-    public double[] getValorEntradas() {
-        return valorEntradas;
-    }
-
-    public void setValorEntradas(double[] valorEntradas) {
-        this.valorEntradas = valorEntradas;
-    }
-
-    public int getQuantidadeAtual() {
-        return quantidadeAtual;
-    }
-
-    public void setQuantidadeAtual(int quantidadeAtual) {
-        this.quantidadeAtual = quantidadeAtual;
+    public void setTipoEntrada(String tipoEntrada) {
+        this.tipoEntrada = tipoEntrada;
     }
 
     
 
-    
-    
+
 
 }

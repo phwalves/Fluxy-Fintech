@@ -5,6 +5,7 @@ public class Conta {
     private Login dadosLogin;
     private double saldoAtual;
 
+
     public Conta() {}
 
     public Conta(Login dadosLogin, double saldoAtual){
@@ -14,12 +15,12 @@ public class Conta {
 
     public void adicionarSaldo(double valor){
         this.saldoAtual += valor;
-        System.out.println("Saldo atual: R$" + saldoAtual);
+        // System.out.println("Saldo atual: R$" + saldoAtual);
     }
 
     public void subtrairSaldo(double valor){
         this.saldoAtual -= valor;
-        System.out.println("Saldo atual: R$" + saldoAtual);
+        // System.out.println("Saldo atual: R$" + saldoAtual);
     }
 
     public void exibirDadosConta () {
